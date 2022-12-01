@@ -12,7 +12,7 @@ async function main() {
   console.log(`BWV Token deployed to ${contract.address}`);
 
   console.log(`Balance of ${account} is ${await contract.balanceOf(account)}`);
-  await contract.mint(account, 1_000_000_000_000_000_000_000);
+  await contract.mint(account, ethers.BigNumber.from(1000000000000000000000n));
   console.log(`Balance of ${account} is ${await contract.balanceOf(account)}`);
 
 }
